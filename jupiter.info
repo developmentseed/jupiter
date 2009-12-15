@@ -1,6 +1,6 @@
+dependencies[] = "features"
 dependencies[] = "ctools"
 description = "Site configuration for the Spaces Demo."
 features[ctools][] = "variable"
 features[node][] = "group"
-features[variable][] = "og_content_type_usage_group"
 name = "Jupiter - Spaces Demo"
