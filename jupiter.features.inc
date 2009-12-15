@@ -17,3 +17,12 @@ function jupiter_node_info() {
   $args = func_get_args();
   return call_user_func_array('_jupiter_node_info', $args);
 }
+
+/**
+ * Implementation of hook_strongarm().
+ */
+function jupiter_strongarm() {
+  module_load_include('inc', 'jupiter', 'jupiter.defaults');
+  $args = func_get_args();
+  return call_user_func_array('_jupiter_strongarm', $args);
+}
