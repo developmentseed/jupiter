@@ -40,6 +40,43 @@ function _jupiter_spaces_presets() {
         'spaces_dashboard' => '1',
       ),
     ),
+    'context' => array(
+      'spaces_dashboard' => stdClass::__set_state(array(
+         'name' => 'spaces_dashboard',
+         'description' => 'Dashboard',
+         'tag' => 'Dashboard',
+         'conditions' => 
+        array (
+        ),
+         'reactions' => 
+        array (
+          'block' => 
+          array (
+            'blocks' => 
+            array (
+              'views-spaces_blog-block_1' => 
+              array (
+                'module' => 'views',
+                'delta' => 'spaces_blog-block_1',
+                'region' => 'content',
+                'weight' => 0,
+              ),
+              'views-spaces_blog_comments-block_1' => 
+              array (
+                'module' => 'views',
+                'delta' => 'spaces_blog_comments-block_1',
+                'region' => 'left',
+                'weight' => 0,
+              ),
+            ),
+            'layout' => 'offset',
+          ),
+        ),
+         'table' => 'context',
+         'type' => 'Overridden',
+         'export_type' => 3,
+      )),
+    ),
   );
 
   $export['og_jupiter'] = $spaces_presets;
