@@ -91,6 +91,22 @@ function _jupiter_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_toolbar';
+  $strongarm->value = array(
+    'layout' => 'vertical',
+    'position' => 'nw',
+    'blocks' => array(
+      'spaces_dashboard-editor' => 'spaces_dashboard-editor',
+      'admin-create' => 'admin-create',
+      'admin-menu' => 'admin-menu',
+      'context_ui-editor' => 0,
+    ),
+  );
+
+  $export['admin_toolbar'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_primary_links_source';
   $strongarm->value = 'features';
 
