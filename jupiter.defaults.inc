@@ -146,6 +146,7 @@ function _jupiter_strongarm() {
   $strongarm->name = 'spaces_features';
   $strongarm->value = array(
     'atrium_reader' => '1',
+    'jupiter' => '1',
     'spaces_blog' => '1',
     'spaces_dashboard' => '0',
   );
@@ -165,6 +166,15 @@ function _jupiter_strongarm() {
   $strongarm->value = 'user_jupiter';
 
   $export['spaces_preset_user'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_defaults';
+  $strongarm->value = array(
+    'og' => TRUE,
+  );
+
+  $export['views_defaults'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
