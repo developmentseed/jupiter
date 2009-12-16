@@ -8,7 +8,7 @@ function _jupiter_node_info() {
     'group' => array(
       'name' => t('Group'),
       'module' => 'features',
-      'description' => '',
+      'description' => t('A working group where members can collaborate.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
