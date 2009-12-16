@@ -112,6 +112,32 @@ function _jupiter_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_footer';
+  $strongarm->value = '<a href=\'http://drupal.org/project/spacesdemo\'>Spaces 3 demo</a><br/>
+  &copy; 2009 by <a href=\'http://www.developmentseed.org\'>Development Seed</a>';
+
+  $export['site_footer'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_frontpage';
+  $strongarm->value = 'blog';
+
+  $export['site_frontpage'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'spaces_features';
+  $strongarm->value = array(
+    'atrium_reader' => '1',
+    'spaces_blog' => '1',
+    'spaces_dashboard' => '0',
+  );
+
+  $export['spaces_features'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'spaces_preset_og';
   $strongarm->value = 'og_jupiter';
 
@@ -123,5 +149,12 @@ function _jupiter_strongarm() {
   $strongarm->value = 'user_jupiter';
 
   $export['spaces_preset_user'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_no_hover_links';
+  $strongarm->value = 1;
+
+  $export['views_no_hover_links'] = $strongarm;
   return $export;
 }
