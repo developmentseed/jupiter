@@ -41,7 +41,7 @@ function _jupiter_spaces_presets() {
       ),
     ),
     'context' => array(
-      'spaces_dashboard' => stdClass::__set_state(array(
+      'spaces_dashboard' => (object) (array(
          'name' => 'spaces_dashboard',
          'description' => 'Dashboard',
          'tag' => 'Dashboard',
@@ -80,16 +80,6 @@ function _jupiter_spaces_presets() {
   );
 
   $export['og_jupiter'] = $spaces_presets;
-  $spaces_presets = new stdClass;
-  $spaces_presets->disabled = FALSE; /* Edit this to true to make a default spaces_presets disabled initially */
-  $spaces_presets->api_version = 3;
-  $spaces_presets->name = 'user_jupiter';
-  $spaces_presets->title = 'Simple user space';
-  $spaces_presets->description = '';
-  $spaces_presets->space_type = 'user';
-  $spaces_presets->value = FALSE;
-
-  $export['user_jupiter'] = $spaces_presets;
   return $export;
 }
 
