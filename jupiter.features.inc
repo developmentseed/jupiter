@@ -19,6 +19,15 @@ function jupiter_node_info() {
 }
 
 /**
+ * Implementation of hook_spaces_presets().
+ */
+function jupiter_spaces_presets() {
+  module_load_include('inc', 'jupiter', 'jupiter.defaults');
+  $args = func_get_args();
+  return call_user_func_array('_jupiter_spaces_presets', $args);
+}
+
+/**
  * Implementation of hook_strongarm().
  */
 function jupiter_strongarm() {
