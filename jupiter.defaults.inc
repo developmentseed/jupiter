@@ -157,6 +157,14 @@ function _jupiter_spaces_presets() {
 function _jupiter_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: administer nodes
+  $permissions[] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      '0' => 'admin',
+    ),
+  );
+
   // Exported permission: switch users
   $permissions[] = array(
     'name' => 'switch users',
