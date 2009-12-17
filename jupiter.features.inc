@@ -28,6 +28,15 @@ function jupiter_spaces_presets() {
 }
 
 /**
+ * Implementation of hook_user_default_permissions().
+ */
+function jupiter_user_default_permissions() {
+  module_load_include('inc', 'jupiter', 'jupiter.defaults');
+  $args = func_get_args();
+  return call_user_func_array('_jupiter_user_default_permissions', $args);
+}
+
+/**
  * Implementation of hook_strongarm().
  */
 function jupiter_strongarm() {
