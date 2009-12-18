@@ -48,41 +48,23 @@ function _jupiter_spaces_presets() {
       ),
     ),
     'context' => array(
-      'spaces_dashboard' => (object) (array(
-         'name' => 'spaces_dashboard',
-         'description' => 'Dashboard',
-         'tag' => 'Dashboard',
-         'conditions' => 
-        array (
-        ),
-         'reactions' => 
-        array (
-          'block' => 
-          array (
-            'blocks' => 
-            array (
-              'views-spaces_blog-block_1' => 
-              array (
-                'module' => 'views',
-                'delta' => 'spaces_blog-block_1',
-                'region' => 'content',
-                'weight' => 0,
-              ),
-              'views-spaces_blog_comments-block_1' => 
-              array (
-                'module' => 'views',
-                'delta' => 'spaces_blog_comments-block_1',
-                'region' => 'right',
-                'weight' => 0,
-              ),
-            ),
-            'layout' => 'sidebar',
+      'spaces_dashboard:reaction:block' => array(
+        'blocks' => array(
+          'views-spaces_blog-block_1' => array(
+            'module' => 'views',
+            'delta' => 'spaces_blog-block_1',
+            'region' => 'content',
+            'weight' => 0,
+          ),
+          'views-spaces_blog_comments-block_1' => array(
+            'module' => 'views',
+            'delta' => 'spaces_blog_comments-block_1',
+            'region' => 'right',
+            'weight' => 0,
           ),
         ),
-         'table' => 'context',
-         'type' => 'Overridden',
-         'export_type' => 3,
-      )),
+        'layout' => 'sidebar',
+      ),
     ),
   );
 
@@ -109,41 +91,23 @@ function _jupiter_spaces_presets() {
       ),
     ),
     'context' => array(
-      'spaces_dashboard' => (object) (array(
-         'name' => 'spaces_dashboard',
-         'description' => 'Dashboard',
-         'tag' => 'Dashboard',
-         'conditions' => 
-        array (
-        ),
-         'reactions' => 
-        array (
-          'block' => 
-          array (
-            'blocks' => 
-            array (
-              'views-spaces_blog-block_1' => 
-              array (
-                'module' => 'views',
-                'delta' => 'spaces_blog-block_1',
-                'region' => 'content',
-                'weight' => 0,
-              ),
-              'views-spaces_blog_comments-block_1' => 
-              array (
-                'module' => 'views',
-                'delta' => 'spaces_blog_comments-block_1',
-                'region' => 'right',
-                'weight' => 0,
-              ),
-            ),
-            'layout' => 'sidebar',
+      'spaces_dashboard:reaction:block' => array(
+        'blocks' => array(
+          'views-spaces_blog-block_1' => array(
+            'module' => 'views',
+            'delta' => 'spaces_blog-block_1',
+            'region' => 'content',
+            'weight' => 0,
+          ),
+          'views-spaces_blog_comments-block_1' => array(
+            'module' => 'views',
+            'delta' => 'spaces_blog_comments-block_1',
+            'region' => 'right',
+            'weight' => 0,
           ),
         ),
-         'table' => 'context',
-         'type' => 'Overridden',
-         'export_type' => 3,
-      )),
+        'layout' => 'sidebar',
+      ),
     ),
   );
 
@@ -207,6 +171,13 @@ function _jupiter_strongarm() {
   );
 
   $export['admin_toolbar'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'context_ui_show_empty_regions';
+  $strongarm->value = 1;
+
+  $export['context_ui_show_empty_regions'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
